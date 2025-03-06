@@ -1,0 +1,40 @@
+/* Estilos para la página de Contacto */
+.otherpage-container {
+    text-align: center;
+    padding: 40px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.otherpage-container h1 {
+    color: #007bff;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.otherpage-container p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Botón de volver a inicio */
+.otherpage-container a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #e45b00;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.otherpage-container a:hover {
+    background: #a54200;
+}

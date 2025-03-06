@@ -1,0 +1,21 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Asegurar que la app ocupa toda la pantalla */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Aplicar el fondo de `HomePage` correctamente */
+main {
+  flex-grow: 1;
+  width: 100%;
+}
