@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./Carrito.css";
+import "./Cart.css";
 
-const Carrito = ({ carrito = [], setCarrito }) => {
+const Cart = ({ carrito = [], setCarrito }) => {
   const [estaAbierto, setEstaAbierto] = useState(false);
 
   const obtenerResumenCarrito = () => {
@@ -62,4 +62,4 @@ const Carrito = ({ carrito = [], setCarrito }) => {
   );
 };
 
-export default Carrito;
+export default Cart;

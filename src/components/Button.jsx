@@ -1,6 +1,6 @@
-import "./Boton.css";
+import "./Button.css";
 
-const Boton = ({ texto, onClick, estilo }) => {
+const Button = ({ texto, onClick, estilo }) => {
   return (
     <button className={`boton-personalizado ${estilo}`} onClick={onClick}>
       {texto}
@@ -8,4 +8,4 @@ const Boton = ({ texto, onClick, estilo }) => {
   );
 };
 
-export default Boton;
+export default Button;

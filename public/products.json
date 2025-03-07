@@ -1,39 +1,39 @@
 [
     {
       "id": 1,
-      "name": "Bowl",
-      "price": 12.00,
-      "image": "bowl.png"
+      "nombre": "Bowl",
+      "precio": 12.00,
+      "imagen": "bowl.png"
     },
     {
       "id": 2,
-      "name": "Comida para pájaros",
-      "price": 24.00,
-      "image": "comida-pajaro.jpg"
+      "nombre": "Comida para pájaros",
+      "precio": 24.00,
+      "imagen": "comida-pajaro.jpg"
     },
     {
       "id": 3,
-      "name": "Cuerda para perros",
-      "price": 15.50,
-      "image": "cuerda.png"
+      "nombre": "Cuerda para perros",
+      "precio": 15.50,
+      "imagen": "cuerda.png"
     },
     {
       "id": 4,
-      "name": "Caseta",
-      "price": 69.99,
-      "image": "caseta.png"
+      "nombre": "Caseta",
+      "precio": 69.99,
+      "imagen": "caseta.png"
     },
     {
       "id": 5,
-      "name": "Comida para perros Pure",
-      "price": 9.99,
-      "image": "pure.png"
+      "nombre": "Comida para perros Pure",
+      "precio": 9.99,
+      "imagen": "pure.png"
     },
     {
       "id": 6,
-      "name": "Comida para gatos Royal Canin",
-      "price": 35.00,
-      "image": "royal-canin.png"
+      "nombre": "Comida para gatos Royal Canin",
+      "precio": 35.00,
+      "imagen": "royal-canin.png"
     }
   ]
   

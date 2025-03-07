@@ -1,7 +1,7 @@
-import Boton from "../components/Boton";
-import "./OtraPagina.css";
+import Button from "../components/Button";
+import "./OtherPage.css";
 
-const OtraPagina = () => {
+const OtherPage = () => {
     return (
         <div className="otra-pagina-contenedor">
             <h1>¿Quiénes somos?</h1>
@@ -23,9 +23,9 @@ const OtraPagina = () => {
                 manos. Aquí, cada pequeña contribución, ya sea adoptando, colaborando o simplemente difundiendo nuestro
                 trabajo, hace una gran diferencia. ¡Hagamos juntos de este mundo un lugar mejor para ellos!
             </p>
-            <Boton texto="Volver a Inicio" onClick={() => window.location.href = "/"} estilo="primario" />
+            <Button texto="Volver a Inicio" onClick={() => window.location.href = "/"} estilo="primario" />
         </div>
     );
 };
 
-export default OtraPagina;
+export default OtherPage;

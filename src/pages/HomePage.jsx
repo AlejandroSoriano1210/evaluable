@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import Carrito from "../components/Carrito";
-import Boton from "../components/Boton";
-import "../components/Carrito.css";
-import "../pages/PaginaPrincipal.css";
+import Cart from "../components/Cart";
+import Button from "../components/Button";
+import "../components/Cart.css";
+import "../pages/HomePage.css";
 
 const imagenes = import.meta.glob("../assets/*", { eager: true });
 
-const PaginaPrincipal = () => {
+const HomePage = () => {
   const [productos, setProductos] = useState([]);
   const [carrito, setCarrito] = useState([]);
 
@@ -37,14 +37,14 @@ const PaginaPrincipal = () => {
             <div className="producto-info">
               <h3>{producto.nombre}</h3>
               <p>${producto.precio.toFixed(2)}</p>
-              <Boton texto="Agregar al Carrito" onClick={() => setCarrito([...carrito, producto])} estilo="primario" />
+              <Button texto="Agregar al Carrito" onClick={() => setCarrito([...carrito, producto])} estilo="primario" />
             </div>
           </div>
         ))}
       </div>
-      <Carrito carrito={carrito} setCarrito={setCarrito} />
+      <Cart carrito={carrito} setCarrito={setCarrito} />
     </div>
   );
 };
 
-export default PaginaPrincipal;
+export default HomePage;
