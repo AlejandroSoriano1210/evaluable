@@ -8,14 +8,3 @@
 .enlaces-sociales {
     margin-top: 10px;
 }
-
-.enlaces-sociales a {
-    color: #ff9800;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-.enlaces-sociales a:hover {
-    color: #ffd700;
-}

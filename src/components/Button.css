@@ -37,3 +37,14 @@
 .boton-personalizado.peligro:hover {
     background-color: #cc0000;
 }
+
+.boton-personalizado.redes-sociales {
+    color: #ff9800;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.boton-personalizado.redes-sociales:hover {
+    color: #ffd700;
+}

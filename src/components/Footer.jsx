@@ -1,3 +1,4 @@
+import Button from "./Button";
 import "./Footer.css";
 
 const Footer = () => {
@@ -5,9 +6,9 @@ const Footer = () => {
         <footer className="pie-de-pagina">
             <p>&copy; 2025 Mi Tienda. Todos los derechos reservados.</p>
             <div className="enlaces-sociales">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
+                <Button texto="Facebook" onClick={() => window.open("https://facebook.com", "_blank")} estilo="redes-sociales" />
+                <Button texto="Twitter/X" onClick={() => window.open("https://x.com", "_blank")} estilo="redes-sociales" />
+                <Button texto="Instagram" onClick={() => window.open("https://instagram.com", "_blank")} estilo="redes-sociales" />
             </div>
         </footer>
     );

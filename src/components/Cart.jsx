@@ -53,7 +53,7 @@ const Cart = ({ carrito = [], setCarrito }) => {
                 {item.nombre} x{item.cantidad} - ${item.precio * item.cantidad}
                 
                 <Button
-                  texto="-"
+                  texto="Quitar 1"
                   onClick={() => disminuirCantidad(item.nombre)}
                   estilo="boton-disminuir"
                 />
