@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Cart.css";
+import Button from "./Button";
 
 const Cart = ({ carrito = [], setCarrito }) => {
   const [estaAbierto, setEstaAbierto] = useState(false);
@@ -37,9 +38,11 @@ const Cart = ({ carrito = [], setCarrito }) => {
 
   return (
     <div className="carrito-wrapper">
-      <button className="carrito-boton" onClick={() => setEstaAbierto(!estaAbierto)}>
-        🛒 ({carrito.length})
-      </button>
+      <Button
+        texto={`🛒 (${carrito.length})`}
+        onClick={() => setEstaAbierto(!estaAbierto)}
+        estilo="carrito-boton"
+      />
 
       {estaAbierto && (
         <div className="carrito-contenedor">
@@ -48,14 +51,35 @@ const Cart = ({ carrito = [], setCarrito }) => {
             {obtenerResumenCarrito().map((item) => (
               <li key={item.nombre}>
                 {item.nombre} x{item.cantidad} - ${item.precio * item.cantidad}
-                <button onClick={() => disminuirCantidad(item.nombre)}>-</button>
-                <button onClick={() => eliminarDelCarrito(item.nombre)}>Eliminar</button>
+                
+                <Button
+                  texto="-"
+                  onClick={() => disminuirCantidad(item.nombre)}
+                  estilo="boton-disminuir"
+                />
+
+                <Button
+                  texto="Eliminar"
+                  onClick={() => eliminarDelCarrito(item.nombre)}
+                  estilo="boton-eliminar"
+                />
               </li>
             ))}
           </ul>
+
           <p>Total: ${total.toFixed(2)}</p>
-          <button onClick={vaciarCarrito} className="carrito-general">Vaciar Carrito</button>
-          <button onClick={() => setEstaAbierto(false)} className="carrito-general">Cerrar</button>
+
+          <Button
+            texto="Vaciar Carrito"
+            onClick={vaciarCarrito}
+            estilo="carrito-general"
+          />
+
+          <Button
+            texto="Cerrar"
+            onClick={() => setEstaAbierto(false)}
+            estilo="carrito-general"
+          />
         </div>
       )}
     </div>
