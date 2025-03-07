@@ -1,10 +1,10 @@
-import "./Footer.css";
+import "./PieDePagina.css";
 
-const Footer = () => {
+const PieDePagina = () => {
     return (
-        <footer className="footer">
+        <footer className="pie-de-pagina">
             <p>&copy; 2025 Mi Tienda. Todos los derechos reservados.</p>
-            <div className="social-links">
+            <div className="enlaces-sociales">
                 <a href="#">Facebook</a>
                 <a href="#">Twitter</a>
                 <a href="#">Instagram</a>
@@ -13,4 +13,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default PieDePagina;

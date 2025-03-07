@@ -1,21 +1,21 @@
-import "./Header.css";
-import Button from "../components/Button";
+import "./Encabezado.css";
+import Boton from "../components/Boton";
 import logo from "../assets/logo.svg";
 
-const Header = () => {
+const Encabezado = () => {
     return (
-        <header className="header">
+        <header className="encabezado">
             <img src={logo} alt="Logo de la tienda" className="logo-img" />
             <div className="nombre-tienda">Huellas Felices</div>
             <nav>
                 <ul>
-                    <li><Button text="Inicio" onClick={() => window.location.href = "/"} style="secondary" /></li>
-                    <li><Button text="Conócenos" onClick={() => window.location.href = "/otherpage"} style="secondary" /></li>
-                    <li><Button text=":D" onClick={() => window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank")} style="secondary" /></li>
+                    <li><Boton texto="Inicio" onClick={() => window.location.href = "/"} estilo="secundario" /></li>
+                    <li><Boton texto="Conócenos" onClick={() => window.location.href = "/otherpage"} estilo="secundario" /></li>
+                    <li><Boton texto=":D" onClick={() => window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank")} estilo="secundario" /></li>
                 </ul>
             </nav>
         </header>
     );
 };
 
-export default Header;
+export default Encabezado;

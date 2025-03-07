@@ -1,65 +1,65 @@
 import { useState } from "react";
-import "./Cart.css";
+import "./Carrito.css";
 
-const Cart = ({ cart = [], setCart }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Carrito = ({ carrito = [], setCarrito }) => {
+  const [estaAbierto, setEstaAbierto] = useState(false);
 
-  const getCartSummary = () => {
-    const summary = {};
-    cart.forEach((item) => {
-      if (summary[item.name]) {
-        summary[item.name].quantity += 1;
+  const obtenerResumenCarrito = () => {
+    const resumen = {};
+    carrito.forEach((item) => {
+      if (resumen[item.nombre]) {
+        resumen[item.nombre].cantidad += 1;
       } else {
-        summary[item.name] = { ...item, quantity: 1 };
+        resumen[item.nombre] = { ...item, cantidad: 1 };
       }
     });
-    return Object.values(summary);
+    return Object.values(resumen);
   };
 
-  const removeFromCart = (name) => {
-    setCart(cart.filter((item) => item.name !== name));
+  const eliminarDelCarrito = (nombre) => {
+    setCarrito(carrito.filter((item) => item.nombre !== nombre));
   };
 
-  const decreaseQuantity = (name) => {
-    const index = cart.findIndex((item) => item.name === name);
+  const disminuirCantidad = (nombre) => {
+    const index = carrito.findIndex((item) => item.nombre === nombre);
     if (index !== -1) {
-      const updatedCart = [...cart];
-      updatedCart.splice(index, 1);
-      setCart(updatedCart);
+      const carritoActualizado = [...carrito];
+      carritoActualizado.splice(index, 1);
+      setCarrito(carritoActualizado);
     }
   };
 
-  const clearCart = () => {
-    setCart([]);
+  const vaciarCarrito = () => {
+    setCarrito([]);
   };
 
-  const total = cart.reduce((acc, item) => acc + item.price, 0);
+  const total = carrito.reduce((acc, item) => acc + item.precio, 0);
 
   return (
-    <div className="cart-wrapper">
-      <button className="cart-button" onClick={() => setIsOpen(!isOpen)}>
-        🛒 ({cart.length})
+    <div className="carrito-wrapper">
+      <button className="carrito-boton" onClick={() => setEstaAbierto(!estaAbierto)}>
+        🛒 ({carrito.length})
       </button>
 
-      {isOpen && (
-        <div className="cart-container">
+      {estaAbierto && (
+        <div className="carrito-contenedor">
           <h2>Carrito de Compras</h2>
           <ul>
-            {getCartSummary().map((item) => (
-              <li key={item.name}>
-                {item.name} x{item.quantity} - ${item.price * item.quantity}
-                <button onClick={() => decreaseQuantity(item.name)}>-</button>
-                <button onClick={() => removeFromCart(item.name)}>Eliminar</button>
+            {obtenerResumenCarrito().map((item) => (
+              <li key={item.nombre}>
+                {item.nombre} x{item.cantidad} - ${item.precio * item.cantidad}
+                <button onClick={() => disminuirCantidad(item.nombre)}>-</button>
+                <button onClick={() => eliminarDelCarrito(item.nombre)}>Eliminar</button>
               </li>
             ))}
           </ul>
           <p>Total: ${total.toFixed(2)}</p>
-          <button onClick={clearCart} className="cart-general">Vaciar Carrito</button>
-          <button onClick={() => setIsOpen(false)} className="cart-general">Cerrar</button>
+          <button onClick={vaciarCarrito} className="carrito-general">Vaciar Carrito</button>
+          <button onClick={() => setEstaAbierto(false)} className="carrito-general">Cerrar</button>
         </div>
       )}
     </div>
   );
 };
 
-export default Cart;
+export default Carrito;

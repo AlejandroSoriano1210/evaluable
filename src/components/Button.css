@@ -1,5 +1,5 @@
 /* Estilos generales del botón reutilizable */
-.custom-button {
+.boton-personalizado {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -9,32 +9,32 @@
 }
 
 /* Estilo para botones principales */
-.custom-button.primary {
+.boton-personalizado.primario {
     background-color: #ff6600;
     color: white;
 }
 
-.custom-button.primary:hover {
+.boton-personalizado.primario:hover {
     background-color: #e65c00;
     transform: scale(1.05);
 }
 
 /* Estilo para botones secundarios */
-.custom-button.secondary {
+.boton-personalizado.secundario {
     background-color: #007bff;
     color: white;
 }
 
-.custom-button.secondary:hover {
+.boton-personalizado.secundario:hover {
     background-color: #0056b3;
 }
 
 /* Estilo para botones de eliminar */
-.custom-button.danger {
+.boton-personalizado.peligro {
     background-color: #ff4d4d;
     color: white;
 }
 
-.custom-button.danger:hover {
+.boton-personalizado.peligro:hover {
     background-color: #cc0000;
 }

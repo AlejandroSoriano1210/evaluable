@@ -1,9 +1,9 @@
-import Button from "../components/Button";
-import "./OtherPage.css";
+import Boton from "../components/Boton";
+import "./OtraPagina.css";
 
-const OtherPage = () => {
+const OtraPagina = () => {
     return (
-        <div className="otherpage-container">
+        <div className="otra-pagina-contenedor">
             <h1>¿Quiénes somos?</h1>
             <p>
                 Bienvenidos a Huellas Felices, una asociación dedicada a mejorar la vida de nuestros amigos peludos y a
@@ -23,8 +23,9 @@ const OtherPage = () => {
                 manos. Aquí, cada pequeña contribución, ya sea adoptando, colaborando o simplemente difundiendo nuestro
                 trabajo, hace una gran diferencia. ¡Hagamos juntos de este mundo un lugar mejor para ellos!
             </p>
-            <Button text="Volver a Inicio" onClick={() => window.location.href = "/"} style="primary" />        </div>
+            <Boton texto="Volver a Inicio" onClick={() => window.location.href = "/"} estilo="primario" />
+        </div>
     );
 };
 
-export default OtherPage;
+export default OtraPagina;

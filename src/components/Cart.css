@@ -1,4 +1,4 @@
-.cart-button {
+.carrito-boton {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -14,11 +14,11 @@
     transition: background 0.3s;
 }
 
-.cart-button:hover {
+.carrito-boton:hover {
     background-color: #e65c00;
 }
 
-.cart-container {
+.carrito-contenedor {
     position: fixed;
     bottom: 70px;
     right: 20px;
@@ -31,12 +31,12 @@
     text-align: center;
 }
 
-.cart-container ul {
+.carrito-contenedor ul {
     list-style: none;
     padding: 0;
 }
 
-.cart-container li {
+.carrito-contenedor li {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,7 +46,7 @@
     border-radius: 5px;
 }
 
-.cart-container button {
+.carrito-contenedor button {
     background: #ff4d4d;
     color: white;
     border: none;
@@ -59,14 +59,14 @@
     transition: background 0.3s;
 }
 
-.cart-container button:hover {
+.carrito-contenedor button:hover {
     background: #cc0000;
 }
 
-.cart-container button:nth-last-child(2) {
+.carrito-contenedor button:nth-last-child(2) {
     background: #007bff;
 }
 
-.cart-container button:nth-last-child(2):hover {
+.carrito-contenedor button:nth-last-child(2):hover {
     background: #0056b3;
 }

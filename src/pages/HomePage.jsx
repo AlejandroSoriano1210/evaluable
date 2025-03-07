@@ -1,53 +1,50 @@
 import { useState, useEffect } from "react";
-import Cart from "../components/Cart";
-import Button from "../components/Button";
-import "../components/Cart.css";
-import "../pages/HomePage.css";  // Asegurar que se importe correctamente
+import Carrito from "../components/Carrito";
+import Boton from "../components/Boton";
+import "../components/Carrito.css";
+import "../pages/PaginaPrincipal.css";
 
-// Importa imágenes dinámicamente
-const images = import.meta.glob("../assets/*", { eager: true });
+const imagenes = import.meta.glob("../assets/*", { eager: true });
 
-const HomePage = () => {
-  const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]); // Asegurar que cart y setCart están definidos
+const PaginaPrincipal = () => {
+  const [productos, setProductos] = useState([]);
+  const [carrito, setCarrito] = useState([]);
 
   useEffect(() => {
     fetch("/products.json")
       .then((response) => response.json())
       .then((data) => {
-        // Cargar imágenes dinámicamente
-        const updatedProducts = data.map((product) => {
-          const imagePath = `../assets/${product.image}`;
+        const productosActualizados = data.map((producto) => {
+          const rutaImagen = `../assets/${producto.imagen}`;
           return {
-            ...product,
-            image: images[imagePath]?.default || ""
+            ...producto,
+            imagen: imagenes[rutaImagen]?.default || ""
           };
         });
 
-        setProducts(updatedProducts);
+        setProductos(productosActualizados);
       })
       .catch((error) => console.error("Error al cargar productos:", error));
   }, []);
 
   return (
-    <div className="homepage-container">
+    <div className="pagina-principal-contenedor">
       <h1>Bienvenido a la tienda</h1>
-      <div className="products-grid">
-        {products.map((product) => (
-          <div key={product.id} className="product-card">
-            <img src={product.image} alt={product.name} />
-            <div className="product-info">
-              <h3>{product.name}</h3>
-              <p>${product.price.toFixed(2)}</p>
-              <Button text="Agregar al Carrito" onClick={() => setCart([...cart, product])} style="primary" />
+      <div className="productos-grid">
+        {productos.map((producto) => (
+          <div key={producto.id} className="producto-tarjeta">
+            <img src={producto.imagen} alt={producto.nombre} />
+            <div className="producto-info">
+              <h3>{producto.nombre}</h3>
+              <p>${producto.precio.toFixed(2)}</p>
+              <Boton texto="Agregar al Carrito" onClick={() => setCarrito([...carrito, producto])} estilo="primario" />
             </div>
           </div>
         ))}
       </div>
-      {/* Asegurar que Cart recibe correctamente las props */}
-      <Cart cart={cart} setCart={setCart} />
+      <Carrito carrito={carrito} setCarrito={setCarrito} />
     </div>
   );
 };
 
-export default HomePage;
+export default PaginaPrincipal;

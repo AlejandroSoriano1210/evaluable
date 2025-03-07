@@ -1,5 +1,5 @@
 /* Estilos para la página de Contacto */
-.otherpage-container {
+.otra-pagina-contenedor {
     text-align: center;
     padding: 40px;
     max-width: 800px;
@@ -9,13 +9,13 @@
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.otherpage-container h1 {
+.otra-pagina-contenedor h1 {
     color: #007bff;
     font-size: 2rem;
     margin-bottom: 15px;
 }
 
-.otherpage-container p {
+.otra-pagina-contenedor p {
     color: #555;
     font-size: 1.1rem;
     line-height: 1.6;
@@ -23,7 +23,7 @@
 }
 
 /* Botón de volver a inicio */
-.otherpage-container a {
+.otra-pagina-contenedor a {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 15px;
@@ -35,6 +35,6 @@
     transition: background 0.3s;
 }
 
-.otherpage-container a:hover {
+.otra-pagina-contenedor a:hover {
     background: #a54200;
 }
